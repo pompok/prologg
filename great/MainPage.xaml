@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"                                    
+             x:Class="prilogg.MainPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master" BackgroundColor="#40E0D0" >
+            <ContentPage.Content>
+                <StackLayout Padding="5,30,5,5">
+                    <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" >
+                        <Image WidthRequest="65" HeightRequest="65" Aspect="AspectFit" Source="polzovatel.png" VerticalOptions="Center" ></Image>
+                        <Label Text="Link Eye" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Image WidthRequest="24" HeightRequest="24" Aspect="AspectFit" Source="camera.png" HorizontalOptions="Start" ></Image>
+                        <Button Text="Камера" BackgroundColor="MediumTurquoise"  Clicked="Button1" HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Image WidthRequest="24" HeightRequest="24" Aspect="AspectFit" Source="ystroistva.png" HorizontalOptions="Start" ></Image>
+                        <Button Text="Устройства" BackgroundColor="MediumTurquoise" Clicked="Button2" HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Image WidthRequest="24" HeightRequest="24" Aspect="AspectFit" Source="zapis.png" HorizontalOptions="Start" ></Image>
+                        <Button Text="Сохраненные записи" BackgroundColor="MediumTurquoise" Clicked="Button3" HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">                        
+                        <Image WidthRequest = "24" HeightRequest="24" Aspect="AspectFit" Source="dobav.png" HorizontalOptions="Start" ></Image>
+                        <Button Text = "Добавить устройство" BackgroundColor="MediumTurquoise" Clicked="Button4" HorizontalOptions="FillAndExpand"></Button>                       
+                    </StackLayout>
+                    <StackLayout x:Name="ButtonTask" VerticalOptions="End" HorizontalOptions="End">
+                        <Button Text="Login out" BackgroundColor="MediumTurquoise" Clicked="btn_out"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <ContentPage.Content>
+                <Label Text="DetailPage" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
+    
