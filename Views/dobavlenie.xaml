@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prilogg.Views.DatailView.dobavlenie"
+             Title="Добавление устройства">
+    <StackLayout>
+        <TableView>
+        <TableView.Root>
+            <TableRoot>
+                <TableSection Title="Персональные данные для доступа">
+                    <EntryCell Label="Логин" Keyboard="Default" Placeholder="Введите логин" />
+                    <EntryCell Label="Пароль" Keyboard="Default" Placeholder="Введите пароль" />
+                    
+                </TableSection>
+                <TableSection Title="Данные устройства">
+                        <EntryCell Label="Name" Keyboard="Default" Placeholder="Имя вашего устройства" />
+                        <EntryCell Label="IP/Domen" Keyboard="Default" Placeholder="IP вашего устройства" />
+                        <EntryCell Label="TCP port" Keyboard="Telephone" Placeholder="Port вашего устройства" />                    
+                </TableSection>
+            </TableRoot>
+        </TableView.Root>     
+    </TableView>
+    
+   
+        <Button x:Name="Soxranit" Text="Сохранить"  Clicked="btn_sox"/>
+    </StackLayout>
+</ContentPage>

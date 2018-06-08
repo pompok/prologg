@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prilogg.Views.DatailView.ystroistva"
+             Title="Устройства">
+    
+
+    <StackLayout>
+        <Label Text="Список устройств"
+            FontSize="Medium" />
+        <ListView x:Name="YstroistvaList"
+              HasUnevenRows="True"
+              ItemsSource="{Binding Ystroistvas}"
+              >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout>
+                                <Label Text="{Binding Name}" FontSize="18" />
+                                <Label Text="{Binding ip}" />
+                                <Label Text="{Binding port}" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button  Text="Добавить" FontSize="20"  FontAttributes="Bold" 
+                Clicked="Yst"></Button>
+        <Button  Text="Удалить" FontSize="20"  FontAttributes="Bold" 
+                Clicked="Ydal"></Button>
+    </StackLayout>
+    </StackLayout>
+      
+</ContentPage>
+
